@@ -1,0 +1,214 @@
+/* Styles globaux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: lightcoral;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  section {
+    padding: 20px;
+  }
+  
+  nav a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  nav a:hover {
+    background-color: lightgray;
+    color: black;
+  }
+  
+  /* Choisir le nombre de grilles et de colonnes */
+  .container-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 150px);
+    gap: 10px;
+    border: 1px solid black;
+  }
+  
+  .container-grid div {
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Fragmenter la page et gérer l’espace occupé */
+  .container-areas {
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "menu content content"
+      "menu footer footer";
+    gap: 10px;
+    border: 1px solid black;
+  }
+  
+  .container-areas div {
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .container-areas .header {
+    grid-area: header;
+  }
+  
+  .container-areas .menu {
+    grid-area: menu;
+  }
+  
+  .container-areas .content {
+    grid-area: content;
+  }
+  
+  .container-areas .footer {
+    grid-area: footer;
+  }
+  
+  /* Utiliser l’unité fr pour la flexibilité */
+  .container-fr {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+    border: 1px solid black;
+  }
+  
+  .container-fr div {
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Espacer les éléments avec gap */
+  .container-gap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    border: 1px solid black;
+  }
+  
+  .container-gap div {
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Placement d’un item spécifique */
+  .container-item-placement {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    border: 1px solid black;
+  }
+  
+  .container-item-placement div {
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+  }
+  
+ .item-special-1 {
+    grid-column: 2 / 4; 
+    grid-row: 1 / 2;   
+    background-color: lightgreen !important;
+  }
+  
+ .item-special-2 {
+    grid-column: 2 / 3; 
+    grid-row: 1 / 3;   
+    background-color: lightgreen !important;
+  }
+  
+  /* Ajustement de la taille d’un item */
+  .container-align {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    border: 1px solid black;
+  }
+  
+  .container-align div {
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+  }
+  
+ .ajust-item {
+    align-self: center; 
+    justify-self: start; 
+    background-color: lightgreen !important;
+  }
+  
+  .ajust-item-2 {
+    align-self: center; 
+    justify-self: end; 
+    background-color: lightgreen !important;
+  }
+  /* Fusionner plusieurs colonnes ou lignes */
+  .container-merge {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    border: 1px solid black;
+  }
+  
+  .container-merge div {
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  
+  .item-merge {
+    grid-column: span 2;
+    grid-row: span 3;    
+    background-color: lightgreen !important ;
+  }
+  
+  /* Responsivité des items */
+  .container-responsive {
+    display: grid;
+    grid-template-columns: 1fr auto; /* Une colonne flexible, une colonne automatique */
+    gap: 10px;
+    border: 1px solid black;
+  }
+  
+  .container-responsive div {
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Ordonnancement des items */
+  .container-order {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    border: 1px solid black;
+  }
+  
+  .container-order div {
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .container-order .ordered-item {
+    order: 2; /* Cet item apparaît après ceux ayant un ordre inférieur */
+    background-color: lightgreen;
+  }
+  
