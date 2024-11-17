@@ -179,20 +179,6 @@ body {
     background-color: lightgreen !important ;
   }
   
-  /* Responsivité des items */
-  .container-responsive {
-    display: grid;
-    grid-template-columns: 1fr auto; /* Une colonne flexible, une colonne automatique */
-    gap: 10px;
-    border: 1px solid black;
-  }
-  
-  .container-responsive div {
-    background-color: lightblue;
-    text-align: center;
-    padding: 20px;
-  }
-  
   /* Ordonnancement des items */
   .container-order {
     display: grid;
@@ -207,8 +193,15 @@ body {
     padding: 20px;
   }
   
-  .container-order .ordered-item {
-    order: 2; /* Cet item apparaît après ceux ayant un ordre inférieur */
-    background-color: lightgreen;
+  .item-1 {
+    order: 2; 
+    background-color: lightcoral !important
   }
+
+  .item-2{
+    order: 1; 
+    background-color: lightgreen !important;
+  }
+
+
   
