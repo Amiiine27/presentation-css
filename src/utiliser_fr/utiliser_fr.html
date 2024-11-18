@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Utiliser l’unité fr pour la flexibilité</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: lightcoral;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    .container-flex {
+      display: grid;
+      grid-template-columns: 2fr 1fr; /* La première colonne est deux fois plus large */
+      gap: 10px;
+      border: 1px solid black;
+    }
+
+    .container-flex div {
+      background-color: lightblue;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      color: white;
+      background-color: #333;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: lightgray;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Utiliser l’unité fr pour la flexibilité</h1>
+  </header>
+
+  <section>
+    <h2>Exemple avec fr</h2>
+    <div class="container-flex">
+      <div>Colonne 1</div>
+      <div>Colonne 2</div>
+    </div>
+  </section>
+
+  <section>
+    <div style="display: flex; justify-content: center;">
+        <img src="../../images/utiliser_fr.png" alt="" width="600">
+    </div>
+  </section>
+
+  <nav>
+    <a href="../fragmenter_page/fragmenter_page.html">Précédent</a>
+    <a href="../espacer_gap/espacer_gap.html">Suivant</a>
+  </nav>
+</body>
+</html>

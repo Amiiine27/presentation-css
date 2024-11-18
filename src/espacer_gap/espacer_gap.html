@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espacer les éléments avec gap</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: lightcoral;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    section {
+      padding: 20px;
+    }
+
+    .container-gap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      border: 1px solid black;
+    }
+
+    .container-gap div {
+      background-color: lightgray;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      color: white;
+      background-color: #333;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: lightgray;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Espacer les éléments avec gap</h1>
+  </header>
+
+  <section>
+    <h2>Exemple avec gap</h2>
+    <div class="container-gap">
+      <div>Item 1</div>
+      <div>Item 2</div>
+    </div>
+  </section>
+
+  <section>
+    <div style="display: flex; justify-content: center;">
+        <img src="../../images/espacer_gap.png" alt="" width="600">
+    </div>
+  </section>
+
+  <nav>
+    <a href="../utiliser_fr/utiliser_fr.html">Précédent</a>
+    <a href="../placement_specifique/placement_specifique.html">Suivant</a>
+  </nav>
+</body>
+</html>

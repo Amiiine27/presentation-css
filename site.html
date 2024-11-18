@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Choisir le nombre de colonnes</title>
+  <title>PRésentation de CSS GRID</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -18,28 +18,20 @@
       text-align: center;
     }
 
-    section {
-      padding: 20px;
-    }
-
-    .container-columns {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
-      gap: 10px;
-      border: 1px solid black;
-      margin-top: 20px;
-    }
-
-    .container-columns div {
-      background-color: lightblue;
-      text-align: center;
-      padding: 20px;
+    nav {
+      display: flex;
+      flex-direction: column; /* Pour empiler les liens */
+      margin-top: 50px;
+      align-items: center;
     }
 
     nav a {
-      display: inline-block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       margin: 10px;
       padding: 10px 20px;
+      width: 150px;
       color: white;
       background-color: #333;
       text-decoration: none;
@@ -54,20 +46,11 @@
 </head>
 <body>
   <header>
-    <h1>1. Choisir le nombre de colonnes</h1>
+    <h1>Présentation de CSS GRID</h1>
   </header>
 
-  <section>
-    <h2>Exemple</h2>
-    <div class="container-columns">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-    </div>
-  </section>
-
   <nav>
-    <a href="fragmenter_page.html">Suivant</a>
+    <a href="src/choisir_colonne/choisir_colonne.html">Commencer</a>
   </nav>
 </body>
 </html>

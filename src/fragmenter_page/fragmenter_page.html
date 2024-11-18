@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propriétés Automatiques en CSS Grid</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: lightcoral;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    .container-auto {
+      display: grid;
+      grid-auto-columns: 100px;
+      grid-auto-rows: 80px;
+      grid-auto-flow: row; /* Valeur par défaut */
+      gap: 10px;
+      border: 1px solid black;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .container-auto div {
+      background-color: lightblue;
+      text-align: center;
+      padding: 10px;
+    }
+
+    button {
+      display: inline-block;
+      margin: 10px 0;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: lightgray;
+      color: black;
+    }
+
+    nav a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      color: white;
+      background-color: #333;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: lightgray;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Propriétés Automatiques en CSS Grid</h1>
+  </header>
+
+  <section>
+    <h2>Qu’est-ce que grid-auto-columns, grid-auto-rows et grid-auto-flow ?</h2>
+    <p>
+      Ces propriétés permettent de définir comment des lignes et colonnes sont automatiquement ajoutées et organisées dans une grille CSS lorsque des éléments dépassent la configuration initiale.
+    </p>
+
+    <h3>Exemple :</h3>
+    <button onclick="toggleGridFlow()" id="flowInfo">Passer à column</button>
+    <div class="container-auto" id="gridContainer">
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+      <div>Item 4</div>
+      <div>Item 5</div>
+      <div>Item 6</div>
+    </div>
+  </section>
+
+  <p>
+    Dans cet exemple :
+    <ul>
+      <li><strong>grid-auto-columns</strong> définit la largeur des colonnes ajoutées automatiquement (<em>100px</em>).</li>
+      <li><strong>grid-auto-rows</strong> définit la hauteur des lignes ajoutées automatiquement (<em>80px</em>).</li>
+      <li><strong>grid-auto-flow</strong> est configuré sur <code>row</code>, donc les éléments sont ajoutés ligne par ligne.</li>
+    </ul>
+  </p>
+  <p>
+    Changez <code>grid-auto-flow</code> à <code>column</code> pour remplir colonne par colonne.
+  </p>
+
+  <nav> 
+    <a href="../choisir_colonne/choisir_colonne.html">Précédent</a>
+    <a href="../utiliser_fr/utiliser_fr.html">Suivant</a>
+  </nav>
+
+  <script>
+    function toggleGridFlow() {
+      const gridContainer = document.getElementById("gridContainer");
+      const flowInfo = document.getElementById("flowInfo");
+      const currentFlow = gridContainer.style.gridAutoFlow || "row";
+
+      // Toggle between "row" and "column"
+      if (currentFlow === "row") {
+        gridContainer.style.gridAutoFlow = "column";
+        flowInfo.innerHTML = " <strong>column</strong>";
+      } else {
+        gridContainer.style.gridAutoFlow = "row";
+        flowInfo.innerHTML = " <strong>row</strong>";
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+  
